@@ -1,0 +1,104 @@
+html { height: 100%; }
+
+body { 
+	background: #111; 
+	color: white;
+	font-family: Calibri, Tahoma, Arial, sans-serif;
+	height: 100%;
+	overflow: hidden;
+	-webkit-perspective: 800px;
+	perspective: 800px;
+	text-align: center;
+	width: 100%;
+}
+
+a { 
+	color: #EEF; 
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none; 
+}
+
+h1 { 
+	font-family: 'Economica', sans-serif;
+	font-size: 48px;
+	margin-bottom: 40px;
+}
+
+/* 
+=======================
+	Site Specific Stuff
+=======================
+*/
+
+
+
+.tweeter {
+	display: inline-block;
+	margin-right: 20px;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+}
+	.tweeter i {
+		background: rgba(255,255,255,0.4);
+		border-radius: 100px;
+		display: block;
+		height: 200px;
+		margin: 0 auto 10px;
+		overflow: hidden;
+		position: relative;
+		width: 200px;
+	}
+
+	.tweeter img {
+		width: 100%;
+		position: absolute;
+		top: 50%; left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+	}
+	
+	.tweeter a, .tweeter span { display: block; }
+
+
+/* 
+=======================
+	Background Crap 
+=======================
+*/
+
+.space {
+	-webkit-animation: pulse 1s infinite alternate;
+	animation: pulse 1s infinite alternate;
+	background: rgba(9, 109, 201,0.2);
+	max-width: 140px;
+	min-width: 32px;
+	min-height: 32px;
+	position: absolute;
+}
+
+	.space.purple { 
+		-webkit-animation-name: pulseY; background: rgba(56, 9, 196,0.2);
+		animation-name: pulseY; background: rgba(56, 9, 196,0.2); 
+	}
+
+@-webkit-keyframes pulse {
+	0% { opacity: 0.1; -webkit-transform: rotateX(-5deg); }
+	100% { opacity: 0.3; -webkit-transform: rotateX(5deg); }
+}
+
+@-webkit-keyframes pulseY {
+	0% { opacity: 0.01; -webkit-transform: rotateY(-5deg) scale(1); }
+	100% { opacity: 0.3; -webkit-transform: rotateY(5deg) scale(1.2); }
+}
+
+@keyframes pulse {
+	0% { opacity: 0.1; transform: rotateX(-5deg); }
+	100% { opacity: 0.3; transform: rotateX(5deg); }
+}
+
+@keyframes pulseY {
+	0% { opacity: 0.01; transform: rotateY(-5deg) scale(1); }
+	100% { opacity: 0.3; transform: rotateY(5deg) scale(1.2); }
+}
